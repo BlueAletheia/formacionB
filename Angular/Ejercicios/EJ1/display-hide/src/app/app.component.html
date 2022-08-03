@@ -1,0 +1,18 @@
+<nav>
+  <h3>Es to es una prueba</h3>
+  <div class="spacer"></div>
+</nav>
+
+<body>
+  <div>
+    <h2>Hola mundo</h2>
+  </div>
+
+  <button (click)="onClick()" type="button">
+    {{ Mostrar ? "Mostrar" : "Ocultar" }}
+  </button>
+
+  <div *ngIf="visible" class="float">
+    <app-flotante></app-flotante>
+  </div>
+</body>
