@@ -1,0 +1,22 @@
+<div class="caja" id="hijo">
+  <h2>Hijo</h2>
+  <div class="centro">
+    <h4>Padre dice dice: {{ colorHijo }}</h4>
+    <div class="botones">
+      <button class="rojo boton" type="button" (click)="cambiarPadre('rojo')">
+        Rojo
+      </button>
+
+      <button
+        class="amarillo boton"
+        type="button"
+        (click)="cambiarPadre('amarillo')"
+      >
+        Amarillo
+      </button>
+      <button class="verde boton" type="button" (click)="cambiarPadre('verde')">
+        Verde
+      </button>
+    </div>
+  </div>
+</div>

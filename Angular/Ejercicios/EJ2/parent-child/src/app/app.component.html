@@ -1,0 +1,31 @@
+<body>
+  <div class="caja" id="padre">
+    <h2>Padre</h2>
+    <div class="centro">
+      <h4>Hijo dice: {{ newColor }}</h4>
+      <div class="botones">
+        <button class="rojo boton" type="button" (click)="cambiarHijo('rojo')">
+          Rojo
+        </button>
+        <button
+          class="amarillo boton"
+          type="button"
+          (click)="cambiarHijo('amarillo')"
+        >
+          Amarillo
+        </button>
+        <button
+          class="verde boton"
+          type="button"
+          (click)="cambiarHijo('verde')"
+        >
+          Verde
+        </button>
+      </div>
+    </div>
+    <app-child
+      [colorHijo]="colorHijo"
+      (onCambiarPadre)="cambiarPadre($event)"
+    ></app-child>
+  </div>
+</body>
