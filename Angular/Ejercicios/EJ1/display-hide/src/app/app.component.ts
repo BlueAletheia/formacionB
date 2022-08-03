@@ -7,11 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'display-hide';
-  Mostrar: boolean = true;
-  visible: boolean = true;
+  mostrar: boolean = false;
 
   onClick() {
-    this.Mostrar = !this.Mostrar;
-    this.visible = !this.visible;
+    this.mostrar = !this.mostrar;
+  }
+
+  cerrarVentana() {
+    this.mostrar = false;
   }
 }

@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-flotante',
   templateUrl: './flotante.component.html',
   styleUrls: ['./flotante.component.css'],
 })
-export class FlotanteComponent implements OnInit {
+export class FlotanteComponent {
   constructor() {}
+  @Output() onCerrarVentana: EventEmitter<boolean> = new EventEmitter();
 
-  ngOnInit(): void {}
+  cerrarVentana() {
+    this.onCerrarVentana.emit(false);
+  }
 }

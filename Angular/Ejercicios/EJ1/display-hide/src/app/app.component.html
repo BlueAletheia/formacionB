@@ -3,16 +3,16 @@
   <div class="spacer"></div>
 </nav>
 
-<body>
+<main>
   <div>
     <h2>Hola mundo</h2>
   </div>
 
   <button (click)="onClick()" type="button">
-    {{ Mostrar ? "Mostrar" : "Ocultar" }}
+    {{ mostrar ? "Ocultar" : "Mostrar" }}
   </button>
 
-  <div *ngIf="visible" class="float">
-    <app-flotante></app-flotante>
+  <div *ngIf="mostrar" class="float">
+    <app-flotante (onCerrarVentana)="cerrarVentana()"></app-flotante>
   </div>
-</body>
+</main>
