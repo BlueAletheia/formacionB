@@ -1,0 +1,38 @@
+<form (ngSubmit)="agregarNuevoUsuario()">
+  <input
+    type="text"
+    placeholder="Nombre"
+    name="nombre"
+    [(ngModel)]="newUser.nombre"
+  />
+
+  <input
+    type="password"
+    placeholder="Contraseña"
+    name="password"
+    [(ngModel)]="newUser.password"
+  />
+  <input type="password" placeholder="Repetir contraseña" />
+  <input
+    type="email"
+    placeholder="Correo"
+    name="correo"
+    [(ngModel)]="newUser.correo"
+  />
+  <div class="horizontal">
+    <input type="checkbox" name="suscrito" [(ngModel)]="newUser.suscrito" />
+    <span> Envíame ofertas profesionales </span>
+  </div>
+  <select name="pais" [(ngModel)]="newUser.pais">
+    <option value="null">País</option>
+    <option value="España">España</option>
+    <option value="Alemania">Alemania</option>
+  </select>
+  <input
+    type="text"
+    placeholder="Ciudad"
+    name="ciudad"
+    [(ngModel)]="newUser.ciudad"
+  />
+  <input type="submit" value="Enviar" />
+</form>

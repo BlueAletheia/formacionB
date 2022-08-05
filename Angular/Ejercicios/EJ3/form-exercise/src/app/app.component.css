@@ -1,0 +1,12 @@
+.base {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+form input,
+select,
+checkbox {
+  margin-bottom: 8px;
+}
+

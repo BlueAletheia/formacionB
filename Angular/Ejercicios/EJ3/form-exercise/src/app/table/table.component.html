@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Suscrito</th>
+      <th>País</th>
+      <th>Ciudad</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.correo }}</td>
+      <td>{{ usuario.suscrito }}</td>
+      <td>{{ usuario.pais }}</td>
+      <td>{{ usuario.ciudad }}</td>
+    </tr>
+  </tbody>
+</table>
