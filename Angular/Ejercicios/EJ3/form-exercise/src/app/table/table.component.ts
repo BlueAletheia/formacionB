@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { VirtualTimeScheduler } from 'rxjs';
 import { Usuario } from '../interfaces/UsuarioInterface';
 import { UsuariosService } from '../usuarios.service';
 
@@ -9,10 +10,14 @@ import { UsuariosService } from '../usuarios.service';
 })
 export class TableComponent implements OnInit {
   get usuarios() {
-    return this.usuariosService.usuarios;
+    return this.userService.usuarios;
   }
 
-  constructor(private usuariosService: UsuariosService) {}
+  constructor(private userService: UsuariosService) {}
 
   ngOnInit(): void {}
+
+  eliminarUsuario(usuario: Usuario) {
+    this.userService.borrarUsuarios(usuario);
+  }
 }

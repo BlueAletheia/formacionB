@@ -41,4 +41,8 @@ export class UsuariosService {
   agregarUsuario(newUser: Usuario) {
     this._usuarios.push(newUser);
   }
+
+  borrarUsuarios(newUser: Usuario) {
+    this._usuarios = this._usuarios.filter((user) => user !== newUser);
+  }
 }
